@@ -46,6 +46,16 @@ For this dataset, there were 8523 rows and 12 columns.
 
 
 - The histogram graph illustrates the frequency distribution of outlet item sales showing how many items fall into different sales value ranges, where the majority are around  $2000
+
+<p align = "center"> 
+  
+  ![download (22)](https://github.com/MuhannedSh/Prediction-of-Product-Sales/assets/158508098/b278d6f7-65de-439b-a893-3e55fb6f9c24)
+
+
+</p>
+
+- The Figure illstrate that the highest counts are found in "Fruits and Vegetables" with 1232 instances, followed by "Snack Foods" at 1200 and "Household" at 910. Conversely, the lowest counts are seen in "Seafood" with 64 instances, "Breakfast" with 110, and "Starchy Foods" with 148. This distribution offers insights into the varying popularity of different item types within the dataset, informing strategic decisions regarding inventory management and marketing efforts.
+
  ### Expanatory Data Analysis 
     - To visualize the data for explantory purposes, three bargraphs were chosen and one linegraph was chosen.
     - The bargraphs were chosen to show how the categories compare to each other. 
@@ -122,12 +132,25 @@ For this dataset, there were 8523 rows and 12 columns.
 
 
 
-- The Final Model Chosen was a `Random Forest Regressor Model` with the n_estimators tuned to 50.
-- For the testing set on the model, `56.2%` of the variance in y was explained by x. 
-- The Mean Absolute Error was off by about `$765.50`.
-- The Mean Squared Error was `$1,209,445.92`.
-- The Root Mean Squared Error had a calculation of `$1,099.75`.
+- The Final Model Chosen was a ` Tuned Random Forest Regressor Model`.
+- For the testing set on the model, `59.3%` of the variance in y was explained by x. 
+- The Mean Absolute Error was off by about `$745.29`.
+- The Mean Squared Error was `$$1,122,875.19`.
+- The Root Mean Squared Error had a calculation of `$1,059.66`.
 
-Using this model to make sales predictions for food items sold at various stores would not be a very reliable. Considering the previous regression metrics from how the model performed, there is a disparity between the R^2 score and also the Root Mean Squared Error that cannot be ignored.
 
+
+Using this model to make sales predictions for food items sold at various stores would not be very reliable. The disparity between the R^2 score and the Root Mean Squared Error from previous regression metrics cannot be ignored
+
+
+## Feature Importance - Using Tree Based Model
+
+![download (23)](https://github.com/MuhannedSh/Prediction-of-Product-Sales/assets/158508098/1ff2cf19-0f73-4991-a6ac-aa937c09d6bd)
+
+
+- Item_MRP (Item Maximum Retail Price): With a coefficient of 0.441817, Item MRP has the highest importance in predicting sales. This indicates that the maximum retail price of an item has a significant positive effect on sales. Specifically, for every unit increase in the maximum retail price, sales are expected to increase by approximately 0.44 units, holding all other variables constant.
+  
+- Outlet_Type_Grocery Store: With an importance coefficient of 0.191730, the type of outlet being a grocery store is the second most important feature. This suggests that the type of outlet significantly affects sales, with grocery stores having a notable impact compared to other types of outlets.
+  
+- Item_Visibility: Item visibility, with an importance coefficient of 0.099256, is the third most important feature in predicting sales. This implies that the visibility of an item within the store plays a moderately important role in driving sales. Specifically, higher visibility tends to lead to higher sales.
 
